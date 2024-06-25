@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="floatType" value="float" dbms="mysql"/>
+    <property name="clobType" value="clob" dbms="mysql"/>
+    <property name="blobType" value="longblob" dbms="mysql"/>
+    <property name="uuidType" value="varchar(36)" dbms="mysql"/>
+    <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
+
+    <include file="db/liquibase/changelog/20231206105225_added_entity_parent.xml" relativeToChangelogFile="false"/>
+    <include file="db/liquibase/changelog/20231212101912_added_entity_ChildrenDetails.xml"
+             relativeToChangelogFile="false"/>
+    <include file="db/liquibase/changelog/20231212013110_added_entity_constraints_ChildrenDetails.xml"
+             relativeToChangelogFile="false"/>
+    <include file="db/liquibase/changelog/20240226120400_ChildrenDetails_remove_column_backgroundColor.xml"
+             relativeToChangelogFile="false"/>
+    <include file="db/liquibase/changelog/20240305112350_added_column_sub_id_in_parent.xml"
+             relativeToChangelogFile="false"/>
+    <include file="db/liquibase/changelog/20240305121550_change_constraint_in_parent.xml"
+             relativeToChangelogFile="false"/>
+</databaseChangeLog>

@@ -1,0 +1,5 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/liquibase/master.xml
+    contexts: dev
+    dropFirst: false
